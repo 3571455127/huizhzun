@@ -32,7 +32,12 @@ $(function () {
         }, 500);
     });
 
-
+    $("header .nav li").click(function () {
+        $(this).addClass("nav-active").siblings().removeClass("nav-active");
+    })
+    $("header .nav li").mouseover(function () {
+        $(this).addClass("nav-active").siblings().removeClass("nav-active");
+    })
 
 
 })
