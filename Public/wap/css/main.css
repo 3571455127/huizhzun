@@ -270,11 +270,14 @@
 
 .index .contact form .submit-btn {
     color: #fff;
+    border: none;
+    background: linear-gradient(to right, #09b893, #0798ae);
     width: 135px;
     height: 36px;
-    border-radius: 10px;
-    border: none;
-    background: linear-gradient(to right, #09b893, #0798ae)
+    /* background: linear-gradient(77deg, rgba(9, 187, 144, 1) 100%, rgba(7, 151, 176, 1) 100%); */
+    box-shadow: 2px 2px 9px 1px rgba(10, 10, 10, 0.36);
+    border-radius: 8px;
+
 }
 
 .index .contact form .btn-box {
@@ -314,5 +317,5 @@
     text-align: center;
     text-transform: uppercase;
     background: linear-gradient(to right, #09b893, #0798ae);
-    color: #fff;
+    color:#fff;
 }

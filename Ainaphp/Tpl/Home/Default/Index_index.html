@@ -1,126 +1,122 @@
 
-<!--轮播图-->
-<div class="index">
-    <div class="swiper-container swiper-container1">
-        <div class="swiper-wrapper">
-            <YP:flash flashid="1" />
+    <header>
+        <div class="widescreen">
+            <div class="container-full">
+                <div class="row-full clearfix">
+                    <!-- logog -->
+                    <div class="logo pull-left">
+                        <a href="">
+                            <img src="__PUBLIC__/www/images/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <!-- nav -->
+                    <div class="nav pull-left">
+                        <ul class="clearfix">
+                            <li class="nav-active"><a href="javascript:;">HOME</a></li>
+                            <li><a href="#application">application</a></li>
+                            <li><a href="#advantages">advantages</a></li>
+                            <li><a href="#working">Working Principle</a></li>
+                            <li><a href="#technical">Technical Parameters</a></li>
+                            <li><a href="#contact">Contact us</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination swiper-pagination-white"></div>
 
-        <!-- 如果需要导航按钮 -->
-        <div class="swiper-button-prev swiper-button-white"></div>
-        <div class="swiper-button-next swiper-button-white"></div>
+    </header>
 
-    </div>
-</div>
+    <div class="index">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
 
-
-<!--关于我们-->
-<div class="index_us" style="background: #f4f4f4;margin-top: 70px">
-  <div class="index_us_yi">
-    <div>
-      <h4>WHY CHOOSE US</h4>
-      <p>
-      <?php getcatvar('page','id = 74','cont');?><?php getcatvar('page','id = 74','pcont');?>
-      </p>
-    </div>
-  </div>
-  <div class="index_us_er">
-    <div>
-      <img src="__PUBLIC__/www/images/about.jpg" alt="" />
-    </div>
-    <div>
-      <h4>ABOUT US</h4>
-      <p>GUANGDONG METAL FORMING MACHINE WORKS CO.,LTD is a forging equipment manufacturer integrating professional design, research and development, manufacturing and service in South China. Is the first batch of domestic forging industry through ISO9001 enterprises, and has the "national backbone enterprise for forging equipment" and "national export bases", "national high-tech enterprises" more than ten honors.</p>
-    </div>
-    <p style="clear: both;"></p>
-    <a class="more" href="/about.html">VIEW MORE</a>
-  </div>
-</div>
-
-
-
-<!--新产品列表部分-->
-<div class="index_pro" style="padding-top:0">
-  <h4 class="biaoti">PRODUCTS</h4>
-  <div class="index_product">
-    <div class="pro_yi">
-      <h4 class="h4add">{$Categorys[94][catname]}<span></span></h4>
-      <h4>{$Categorys[95][catname]}<span style="display: none;"></span></h4>
-    </div>
-    <div class="pro_er">
-      <!--第一个产品列表-->
-      <ul class="qie">
-        <YP:list order="id asc" catid="94" id="r" limit="3">
-          <li>
-            <a href="{$r.url}">
-              <div><img src="{$r.thumb}" alt="" /></div>
-              <h4>{$r.title}</h4>
-              <p>{$r.keywords}</p>
-            </a>
-          </li>
-        </YP:list>
-      </ul>
-
-      <!--第二个产品列表-->
-      <ul style="display: none;" class="qie">
-        <YP:list order="id asc" catid="95" id="r" limit="3">
-          <li>
-            <a href="{$r.url}">
-              <div><img src="{$r.thumb}" alt="" /></div>
-              <h4>{$r.title}</h4>
-              <p>{$r.keywords}</p>
-            </a>
-          </li>
-        </YP:list>
-      </ul>
-    </div>
-    <a class="more" href="/product.html">VIEW MORE</a>
-  </div>
-
-</div>
-
-
-
-
-
-<!--案例-->
-<div class="index_case">
-    <h4 class="biaoti">CASES</h4>
-    <ul>
-        <YP:list order="id desc" catid="77" limit="3">
-        <li>
-            <img class="case_img" src="{$r.thumb}" alt="" />
-            <div class="yi_case">
-                <h4>{$r.title}</h4>
-                <p>{$r.description}</p>
+        <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 1" key="n">
+                <div class="swiper-slide">
+                    <a href="{$r.link}" title="{$r.title}"><img src="{$r.pic}" alt="{$r.title}"></a>
+                    <a class="contact-btn" href="#contact"></a>
+                </div>
+        </YP:list> 
             </div>
-            <div class="er_case">
-                <a href="{$r.url}"><img src="__PUBLIC__/www/images/more.png" alt="" /></a>
-            </div>
-        </li>
-        </YP:list>
-    </ul>
-    <a class="more" href="/cases.html">VIEW MORE</a>
-</div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
 
-<!--view部分-->
-<div class="index_view">
-    <h4 class="biaoti" style="color: #fff;">NEWS</h4>
-    <ul>
-        <YP:list order="id desc" catid="108" limit="3">
-        <li>
-            <a href="{$r.url}">
-            <img src="{$r.thumb}" alt="" />
-            <div>
-                <span>{$r.createtime|toDate=###,'Y-m-d'}</span>
-                <h4>{$r.title}</h4>
-                <p>{$r.description}</p>
+        <!-- application -->
+        <div class="application">
+            <?php getcatvar('page','id = 74','cont');?>
+        </div>
+
+        <!-- advantages -->
+        <div class="advantages">
+            <?php getcatvar('page','id = 108','cont');?>
+        </div>
+
+        <!-- principle -->
+        <div class="principle">
+           <?php getcatvar('page','id = 78','cont');?>
+        </div>
+
+        <!-- parameters-->
+        <div class="parameters">
+            <?php getcatvar('page','id = 110','cont');?>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="contact">
+            <a name="contact"></a>
+            <h3>Contact Us</h3>
+            <div class="container">
+                <div class="row">
+                        <form method="post" class="clearfix" onsubmit="return beforeSubmit2(this);" action="index.php?g=Home&a=message">
+                       <?php getcatvar('page','id = 111','cont');?>
+                        <div class="btn-box">
+                            <input type="submit" value="SUBMIT" class="submit-btn">
+                        </div>
+
+                    </form>
+                </div>
             </div>
-            </a>
-        </li>
-       </YP:list>
-    </ul>
-    <a class="more2" href="/news.html">VIEW MORE</a>
-</div>
+        </div>
+
+        <!-- info -->
+        <div class="info">
+            <div class="box">
+                <div class="widescreen">
+                    <div class="container-full">
+                        <div class="row-full">
+                            <ul class="clearfix">
+                                <li><span class="box-img"><img src="__PUBLIC__/www/images/phone.png" alt=""> </span>{$phone}</li>
+                                <li> <span class="box-img"><img src="__PUBLIC__/www/images/email.png"
+                                            alt=""></span>{$email} </li>
+                                <li><span class="box-img"><img src="__PUBLIC__/www/images/phone.png" alt=""></span>
+                                    {$dianhua} </li>
+                                <li> <span class="box-img"><img src="__PUBLIC__/www/images/email.png"
+                                            alt=""></span>{$emaila}</li>
+                                <li> <span class="box-img"><img src="__PUBLIC__/www/images/www.png" alt=""></span> {$gwdz}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <p></p>
+            </div>
+            <div class="copy">{$cop}</div>
+        </div>
+
+        <!-- gotop -->
+        <div class="goTop">
+            <i class="topIcon"></i>
+            <p>TOP</p>
+        </div>
+    </div>
+
+
+

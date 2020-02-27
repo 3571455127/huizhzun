@@ -1,87 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TNMWNT9');</script>
-<!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
 
-    <meta name="keywords" content="{$seo_keywords}"/>
-    <meta name="description" content="{$seo_description}"/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="{$seo_keywords}" />
+    <meta name="description" content="{$seo_description}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>{if MODULE_NAME != 'Index'}{$seo_title}{else}{$site_name}{/if}</title>
 
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-     <meta name="renderer" content="webkit">
-     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    <!-- css-->
+    <!-- css -->
+    <link rel="stylesheet" href="__PUBLIC__/www/css/swiper-4.5.0.min.css">
     <link rel="stylesheet" href="__PUBLIC__/www/css/bootstrap.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/www/css/animate.css">
-    <link rel="stylesheet" href="__PUBLIC__/www/css/swiper.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/www/css/comment.css">
+    <link rel="stylesheet" href="__PUBLIC__/www/css/animate.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/www/css/reset.css">
     <link rel="stylesheet" href="__PUBLIC__/www/css/main.css">
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e5758b0a89cda5a18882ac2/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </head>
+
 <body>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNMWNT9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<!--顶部导航-->
-<header>
-    <div class="header1 header2" >
-        <img src="__PUBLIC__/www/images/logo.png" alt="" />
-        <!--当前页面给a标签添加属性.active-->
-        <ul>
-            <li>
-                <a class="{if MODULE_NAME == 'Index'}active{/if}" href="/index.php">HOME</a>
-            </li>
-            <YP:subcat catid='0' id="r" where="listorder asc" limit="7" key="n">
-            <if condition = "$r[catname] neq 'THANKS' ">
-            <li>
-                <a href="{$r.url}" class="{if $bcid==$r[id]}active{/if}">{$r.catname}</a>
-                {if $r[child] == 1 && $r[id] !=74}
-                <ul class="erji">
-                    <YP:subcat catid="$r[id]" id="res" >
-                    <li><a href="{$res.url}" class="{if $catid==$res[id]}active{/if}">{$res.catname}</a></li>
-                    </YP:subcat>
-                </ul>
-                {/if}
-            </li>
-            </if>
-            </YP:subcat>
-        </ul>
-    </div>
-    <div class="header"style="display: none;">
-        <div class="header1">
-            <img src="__PUBLIC__/www/images/logo.png" alt="" />
-            <!--当前页面给a标签添加属性.active-->
-            <ul>
-                <li>
-                    <a class="{if MODULE_NAME == 'Index'}active{/if}" href="/index.php">HOME</a>
-                </li>
-                <YP:subcat catid='0'>
-                <if condition = "$r[catname] neq 'THANKS' ">
-                <li>
-                    <a href="{$r.url}" class="{if $bcid==$r[id]}active{/if}">{$r.catname}</a>
-                    {if $r[child] == 1}
-                    <ul class="erji">
-                        <YP:subcat catid="$r[id]" id="res" >
-                        <li><a href="{$res.url}" class="{if $catid==$res[id]}active{/if}">{$res.catname}</a></li>
-                        </YP:subcat>
-                    </ul>
-                    {/if}
-                </li>
-                </if>
-                </YP:subcat>
-            </ul>
-        </div>
-    </div>
-
-</header>

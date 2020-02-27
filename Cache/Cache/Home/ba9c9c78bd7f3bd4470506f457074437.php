@@ -29,10 +29,10 @@
         <!-- banner 轮播 -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="__PUBLIC__/wap/image/banner.png" alt="">
+                    <?php  $_result=M("slide_data")->field("*")->where("fid = 2 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide">
+                    <img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>">
                     <a href="#contact" class="btn-contact"></a>
-                </div>
+                </div><?php endforeach; endif;?> 
 
             </div>
             <div class="swiper-pagination"></div>
@@ -66,6 +66,9 @@
             <h3>Contact Us</h3>
             <form method="post" class="clearfix" onsubmit="return beforeSubmit2(this);" action="index.php?g=Home&a=message">
                 <?php getcatvar('page','id = 111','pcont');?>
+                <div class="btn-box">
+                    <input type="submit" value="SUBMIT" class="submit-btn">
+                </div>
             </form>
         </div>
 
