@@ -413,6 +413,10 @@ header .nav li:nth-child(5) a {
     color: #120E0E
 }
 
+.index .principle .box .box-imgs {
+    padding-top: 15%;
+}
+
 .index .contact form {
     padding: 50px 0;
 }

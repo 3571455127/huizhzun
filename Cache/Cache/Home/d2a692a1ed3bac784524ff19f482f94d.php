@@ -18,6 +18,19 @@
     <link rel="stylesheet" href="__PUBLIC__/www/css/animate.min.css">
     <link rel="stylesheet" href="__PUBLIC__/www/css/reset.css">
     <link rel="stylesheet" href="__PUBLIC__/www/css/main.css">
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e5758b0a89cda5a18882ac2/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </head>
 
 <body>
@@ -58,6 +71,7 @@
 
         <?php  $_result=M("slide_data")->field("*")->where("fid = 1 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide">
                     <a href="<?php echo ($r["link"]); ?>" title="<?php echo ($r["title"]); ?>"><img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>"></a>
+                    <a class="contact-btn" href="#contact"></a>
                 </div><?php endforeach; endif;?> 
             </div>
             <!-- Add Arrows -->
@@ -93,7 +107,7 @@
             <h3>Contact Us</h3>
             <div class="container">
                 <div class="row">
-                    <form method="post" class="clearfix" onsubmit="return beforeSubmit2(this);">
+                        <form method="post" class="clearfix" onsubmit="return beforeSubmit2(this);" action="index.php?g=Home&a=message">
                        <?php getcatvar('page','id = 111','cont');?>
                         <div class="btn-box">
                             <input type="submit" value="SUBMIT" class="submit-btn">
