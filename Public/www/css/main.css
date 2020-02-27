@@ -170,7 +170,7 @@ img {
 
 body {
     letter-spacing: 1px;
-    font-family: "SourceHanSansCN";
+    font-family: "SourceHanSansCN" !important;
     overflow-x: hidden;
 }
 
@@ -585,6 +585,11 @@ header .nav li:nth-child(5) a {
 
     }
 
+
+    .index .info .box li:nth-child(4) {
+        text-align: left;
+        padding-left: 6%;
+    }
 
     .index .info .box li:nth-child(5) {
         text-align: left;
