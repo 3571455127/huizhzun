@@ -1,0 +1,571 @@
+/* CSS Document */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    outline-style: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+html,
+body {
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", "微软雅黑", sans-serif;
+
+}
+
+body {
+    line-height: 1;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*css为clearfix，清除浮动*/
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+    /*IE/7/6*/
+}
+
+/* 公共类 */
+
+a {
+    color: #666;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+body {
+    letter-spacing: 1px;
+    font-family: "SourceHanSansCN";
+    overflow-x: hidden;
+}
+
+/* header .container-full {
+    padding: 0 266px;
+} */
+
+header .logo {
+    padding: 28px 150px 28px 0;
+}
+
+header .nav li {
+    float: left;
+
+}
+
+header .nav {
+    padding-top: 110px;
+}
+
+header .nav .nav-active {
+    border-bottom: 4px solid #e71a19;
+}
+
+header .nav li a {
+    display: block;
+    height: 70px;
+    padding: 0 25px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+header .nav li a:hover {
+    color: #e71a19;
+}
+
+header .nav li:nth-child(4) a,
+header .nav li:nth-child(5) a {
+    width: 165px;
+    text-align: center;
+}
+
+.index .swiper-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* application */
+.index .application {
+    padding: 60px 0;
+    border-top: 1px solid #4d4c41;
+    border-bottom: 1px solid #4d4c41;
+}
+
+.index .application h3 {
+    color: #07b49a;
+    font-size: 38px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.index .application h3::after {
+    content: "";
+    width: 400px;
+    height: 4px;
+    line-height: 4px;
+    background-color: #07b49a;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.index .application .title {
+    padding-top: 50px;
+    font-size: 28px;
+    color: #535054;
+    text-align: center;
+}
+
+.index .application .box {
+    padding: 10px 0;
+    position: relative;
+}
+
+.index .application .box .logo-g {
+    position: absolute;
+    top: 120px;
+    left: 160px;
+    width: 70%;
+}
+
+.index .application .box .logo-g img {
+    max-width: 100%;
+}
+
+.index .application .txt {
+    color: #535054;
+    font-size: 28px;
+    line-height: 1.4;
+    padding-top: 60px;
+}
+
+.index .application .txt li {
+    padding: 10px 0;
+}
+
+.index .advantages h3,
+.index .principle h3,
+.index .parameters h3,
+.index .contact h3 {
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 36px;
+    height: 165px;
+    line-height: 165px;
+    background: url("../images/advantages1.png")no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.index .advantages h3::after,
+.index .principle h3::after,
+.index .parameters h3::after,
+.index .contact h3::after {
+    content: "";
+    width: 400px;
+    height: 4px;
+    line-height: 4px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.index .advantages .list .box-img {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.index .advantages .list {
+    padding-bottom: 20px;
+}
+
+.index .advantages .list .box-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.index .advantages .list ul {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.index .advantages .list .box {
+    padding: 0 25px;
+}
+
+.index .advantages .list li,
+.index .principle .box li p {
+    line-height: 1.4;
+    font-size: 18px;
+    color: #434343;
+    padding: 10px 0;
+    list-style-image: url("../images/disc.png");
+}
+
+.index .principle .box {
+    padding: 30px 0;
+}
+
+.index .principle .box li {
+    padding: 10px 0;
+}
+
+.index .parameters tr:nth-child(odd) {
+    background-color: #bee2d9
+}
+
+.index .parameters tr td:first-child,
+.index .parameters tr th:first-child {
+    padding-left: 20%;
+}
+
+.index .parameters tr th:first-child {
+    padding-left: 21%;
+}
+
+.index .parameters tr td:nth-child(2),
+.index .parameters tr th:nth-child(2) {
+    padding-left: 10%;
+}
+
+.index .parameters tr td:nth-child(2) {
+    padding-left: 12%;
+}
+
+.index .parameters table tr:first-child {
+    background-color: #74c5b0;
+}
+
+.index .parameters table {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.index .parameters table td,
+.index .parameters table th {
+    line-height: 1.4;
+    padding: 10px 0;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.index .parameters .box {
+    padding: 30px 0;
+}
+
+.index .parameters .box th {
+    color: #120E0E
+}
+
+.index .contact form {
+    padding: 50px 0;
+}
+
+.index .contact form input {
+    padding-left: 10px;
+    width: 90%;
+    height: 32px;
+    border: 1px solid #a4a39e;
+    background-color: #f1f0f0;
+}
+
+.index .contact form .box {
+    padding-bottom: 30px;
+    padding-left: 20%;
+}
+
+.index .contact form .box p {
+    text-transform: capitalize;
+    padding-bottom: 5px;
+    color: #4d4c41;
+}
+
+.index .contact form .box p span {
+    color: #f90527;
+}
+
+.index .contact .btn-box {
+    text-align: center;
+    padding: 20px;
+}
+
+.index .contact .submit-btn {
+    font-weight: 600;
+    font-size: 24px;
+    background: linear-gradient(to right, #09b893, #0798ae);
+    border: none;
+    color: #fff;
+    width: 192px;
+    height: 52px;
+    box-shadow: 6px 6px 9px 1px rgba(10, 10, 10, 0.35);
+    border-radius: 8px;
+}
+
+.index .contact textarea {
+    width: 90%;
+    height: 278px;
+    border: 1px solid #a4a39e;
+    background-color: #f1f0f0;
+}
+
+
+
+.index .info .box {
+    height: 100px;
+    background-color: #f2f1f1;
+    text-align: center;
+}
+
+
+
+.index .info .box li {
+    float: left;
+    line-height: 100px;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.index .info .box .box-img {
+    padding-right: 8px;
+}
+
+.index .info .copy {
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #09b893, #0798ae);
+}
+
+.goTop {
+    position: fixed;
+    bottom: 3rem;
+    right: 0;
+    display: none;
+    width: 58px;
+    height: 58px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #09b893, #0798ae);
+    color: #fff;
+    cursor: pointer;
+}
+
+.goTop .topIcon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-top: 2px solid;
+    border-left: 2px solid #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 15px;
+    left: 36%;
+}
+
+
+.goTop p {
+    font-size: 16px;
+    padding-top: 32px;
+}
+
+
+/* 响应式 */
+@media screen and (max-width:1920px) {
+    header .widescreen {
+        padding: 0 220px;
+    }
+
+    .index .info .widescreen {
+        padding: 0 175px;
+    }
+}
+
+@media screen and (max-width:1910px) {
+    header .widescreen {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    header .logo {
+        padding-right: 60px;
+    }
+
+    header .nav li a {
+        font-size: 18px;
+        padding: 0 12px;
+    }
+
+    .index .info .widescreen {
+        padding: 0;
+    }
+
+    .index .info .box {
+        height: auto;
+        padding: 10px 0;
+    }
+
+
+    .index .info .box li {
+        line-height: 50px;
+        width: 33%;
+        height: 50px;
+        padding: 0;
+        /* text-align: left; */
+    }
+
+    .index .info .box li:nth-child(1),
+    .index .info .box li:nth-child(2){
+        width: 50%;
+    }
+}
