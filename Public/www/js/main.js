@@ -2,17 +2,17 @@
 $(function () {
 
     // index
-    var swiper = new Swiper('.index .swiper-container', {
-        autoplay: true,
-        loop: true,
-        pagination: {
-            el: '.index .swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.index .swiper-button-next',
-            prevEl: '.index .swiper-button-prev',
-        },
-    });
+    // var swiper = new Swiper('.index .swiper-container', {
+    //     autoplay: true,
+    //     loop: true,
+    //     pagination: {
+    //         el: '.index .swiper-pagination',
+    //     },
+    //     navigation: {
+    //         nextEl: '.index .swiper-button-next',
+    //         prevEl: '.index .swiper-button-prev',
+    //     },
+    // });
 
     // new WOW().init();
 

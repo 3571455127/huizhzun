@@ -1,16 +1,16 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no,
-          initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+          initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 
-    <meta name="keywords" content="<?php echo ($seo_keywords); ?>"/>
-    <meta name="description" content="<?php echo ($seo_description); ?>"/>
+    <meta name="keywords" content="<?php echo ($seo_keywords); ?>" />
+    <meta name="description" content="<?php echo ($seo_description); ?>" />
     <title><?php if(MODULE_NAME != 'Index') : echo ($seo_title); else : echo ($site_name); endif;?></title>
 
     <!-- css -->
@@ -20,9 +20,31 @@
     <link rel="stylesheet" href="__PUBLIC__/wap/css/animate.min.css">
     <link rel="stylesheet" href="__PUBLIC__/wap/css/reset.css">
     <link rel="stylesheet" href="__PUBLIC__/wap/css/main.css">
-</head>
-<body>
+    <style>
+        @font-face {
+            font-family: 'SourceHanSansCN';
+            src: url('__PUBLIC__/wap/css/font/SourceHanSansCN-Regular.otf');
 
+        }
+    </style>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5e5758b0a89cda5a18882ac2/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+</head>
+
+<body>
 
 
     <div class="index">
@@ -92,10 +114,10 @@
 
 </body>
 <!-- js -->
-<script type="text/javascript" src="__PUBLIC__/wap/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="__PUBLIC__/wap/swiper-4.5.0.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/wap/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/wap/js/swiper-4.5.0.min.js"></script>
 <!-- <script type="text/javascript" src="__PUBLIC__/wap/bootstrap.min.js"></script> -->
-<script type="text/javascript" src="__PUBLIC__/wap/wow.min.js"></script>
-<script type="text/javascript" src="__PUBLIC__/wap/main.js"></script>
+<script type="text/javascript" src="__PUBLIC__/wap/js/wow.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/wap/js/main.js"></script>
 
 </html>

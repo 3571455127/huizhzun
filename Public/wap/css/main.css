@@ -1,3 +1,8 @@
+html,
+body {
+    font-family: "SourceHanSansCN";
+}
+
 /* index */
 .index .swiper-slide img {
     max-width: 100%;
@@ -55,7 +60,7 @@
     width: 48%;
     height: 2px;
     line-height: 2px;
-    background-color: #07b49a;
+    background-color: #07B49A;
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -91,13 +96,16 @@
 .index .application .box .left {
     width: 50%;
     float: left;
-    line-height: 1.4;
+
     padding-top: 10px;
-    font-size: 15px;
+
 }
 
 .index .application .box .left li {
     padding-bottom: 2%;
+    color: #222726;
+    font-size: 15px;
+    line-height: 1.4;
 }
 
 .index .application .box .right {
@@ -157,7 +165,7 @@
 .index .advantages .box ul li {
     font-size: 15px;
     line-height: 1.4;
-    color: #595d5c;
+    color: #434343;
     padding: 5px 0;
     list-style-image: url("../image/disc.png");
 }
@@ -165,7 +173,7 @@
 .index .principle li {
     font-size: 15px;
     line-height: 1.4;
-    color: #595d5c;
+    color: #434343;
     padding: 5px 3%;
 }
 
@@ -182,6 +190,8 @@
 .index .principle li p {
     width: 70%;
     float: left;
+    font-size: 15px;
+    color: #434343;
 
 }
 
@@ -202,8 +212,7 @@
 }
 
 .index .parameters tr th {
-    color: #120e0e;
-    /* text-align: center; */
+    color: #120E0E;
 }
 
 .index .parameters tr td,
@@ -211,7 +220,7 @@
     padding: 5px;
     font-size: 15px;
     line-height: 1.4;
-    color: #595d5c;
+    color: #120E0E;
     padding: 5px 4%;
     box-sizing: border-box;
 }
@@ -304,7 +313,7 @@
 
 .index .info ul li {
     font-size: 16px;
-    /* text-align: center; */
+    color: #4D4C41;
     line-height: 1.4;
     padding: 10px 0;
     padding-left: 20%;
@@ -317,5 +326,5 @@
     text-align: center;
     text-transform: uppercase;
     background: linear-gradient(to right, #09b893, #0798ae);
-    color:#fff;
+    color: #fff;
 }
