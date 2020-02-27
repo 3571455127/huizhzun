@@ -1,0 +1,318 @@
+/* index */
+.index .swiper-slide img {
+    max-width: 100%;
+    height: auto;
+}
+
+.index .swiper-slide {
+    position: relative;
+}
+
+.index .swiper-slide .btn-contact {
+    z-index: 9999;
+    position: absolute;
+    bottom: -10px;
+    right: -50px;
+    display: block;
+    width: 210px;
+    height: 48px;
+    background: url("../image/btn-contact.png")no-repeat;
+    background-size: 50%;
+
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 2px;
+}
+
+.index .application {
+    padding: 6% 3%;
+}
+
+.index .application h3,
+.index .advantages h3,
+.index .principle h3,
+.index .parameters h3,
+.index .contact h3 {
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #07b49a;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    line-height: 1.4;
+    margin: 5% 0;
+}
+
+.index .application h3::after,
+.index .advantages h3::after,
+.index .principle h3::after,
+.index .parameters h3::after,
+.index .contact h3::after {
+    content: "";
+    width: 48%;
+    height: 2px;
+    line-height: 2px;
+    background-color: #07b49a;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.index .application .title {
+    font-size: 16px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #535054;
+    padding: 3% 0;
+}
+
+.index .application .box {
+    padding: 3% 0;
+    color: #595d5c;
+    position: relative;
+}
+
+.index .application .box .logo-g {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 70%;
+}
+
+.index .application .box .logo-g img {
+    max-width: 100%;
+    height: auto;
+}
+
+.index .application .box .left {
+    width: 50%;
+    float: left;
+    line-height: 1.4;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.index .application .box .left li {
+    padding-bottom: 2%;
+}
+
+.index .application .box .right {
+    width: 50%;
+    float: right;
+}
+
+.index .application .box .right img {
+    max-width: 100%;
+    height: auto;
+}
+
+.index .advantages h3,
+.index .principle h3,
+.index .parameters h3,
+.index .contact h3 {
+    color: #fff;
+    height: 60px;
+    line-height: 55px;
+    background: url("../image/bg.png")no-repeat;
+}
+
+.index .advantages h3::after,
+.index .principle h3::after,
+.index .parameters h3::after,
+.index .contact h3::after {
+    background-color: #fff;
+    bottom: 10px;
+}
+
+.index .advantages .box {
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.index .advantages .box .box-img {
+    width: 35%;
+    float: left;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-38%);
+    left: 2%;
+}
+
+.index .advantages .box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.index .advantages .box ul {
+    width: 58%;
+    float: right;
+    padding-right: 3%;
+}
+
+.index .advantages .box ul li {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #595d5c;
+    padding: 5px 0;
+    list-style-image: url("../image/disc.png");
+}
+
+.index .principle li {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #595d5c;
+    padding: 5px 3%;
+}
+
+.index .principle li .box-img {
+    float: left;
+    width: 30%;
+}
+
+.index .principle img {
+    max-width: 100%;
+    height: auto;
+}
+
+.index .principle li p {
+    width: 70%;
+    float: left;
+
+}
+
+.index .parameters h3 {
+    font-size: 15px;
+}
+
+.index .principle .logo-g {
+    padding: 5%;
+}
+
+.index .principle .box-imgs {
+    padding: 3%;
+}
+
+.index .parameters .box {
+    padding: 5% 0;
+}
+
+.index .parameters tr th {
+    color: #120e0e;
+    /* text-align: center; */
+}
+
+.index .parameters tr td,
+.index .parameters tr th {
+    padding: 5px;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #595d5c;
+    padding: 5px 4%;
+    box-sizing: border-box;
+}
+
+
+.index .parameters tr:nth-child(odd) {
+    background-color: #bee2d9
+}
+
+.index .parameters table tr:first-child {
+    background-color: #74c5b0;
+}
+
+.index .contact form {
+    padding: 5% 3%;
+}
+
+.index .contact form .left {
+    float: left;
+    width: 46%;
+    margin-right: 5%;
+}
+
+.index .contact form input {
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    background-color: #f1f0f0;
+    border: 1px solid #9a9993;
+}
+
+.index .contact form .box {
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.index .contact form .box p {
+    line-height: 1.4;
+}
+
+.index .contact form .box p span {
+    color: #f90527;
+}
+
+.index .contact form .right {
+    float: left;
+    width: 48%;
+}
+
+.index .contact form textarea {
+    width: 100%;
+    height: 200px;
+    background-color: #f1f0f0;
+    border: 1px solid #9a9993;
+}
+
+.index .contact form .submit-btn {
+    color: #fff;
+    width: 135px;
+    height: 36px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right, #09b893, #0798ae)
+}
+
+.index .contact form .btn-box {
+    text-align: center;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.index .info .box {
+    background-color: #f2f1f1;
+}
+
+.index .info .box .box-img {
+    width: 27px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.index .info ul {
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+.index .info ul li {
+    font-size: 16px;
+    /* text-align: center; */
+    line-height: 1.4;
+    padding: 10px 0;
+    padding-left: 20%;
+}
+
+
+.index .info .copy {
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #09b893, #0798ae);
+    color: #fff;
+}

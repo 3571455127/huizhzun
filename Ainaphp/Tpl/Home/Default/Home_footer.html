@@ -1,0 +1,77 @@
+<!--foote部分-->
+<div class="footer_top">
+    <div><img src="__PUBLIC__/www/images/logo.png" alt="" /></div>
+    <div>
+    <YP:subcat catid='0'>
+        <if condition = "$r[catname] neq 'THANKS' ">
+        <a href="{$r.url}">{$r.catname}</a>
+        </if>
+    </YP:subcat>
+    </div>
+    <div class="footer_img">
+        <!--<div><img src="__PUBLIC__/www/images/index_icon1.png" alt="" /></div>-->
+        <div><a href="{$twitter}" target='_BLANK'><img src="__PUBLIC__/www/images/index_icon2.png" alt="" /></a></div>
+        <div><a href="{$google}" target='_BLANK'><img src="__PUBLIC__/www/images/index_icon3.png" alt="" /></a></div>
+        <div><a href="{$facebook}" target='_BLANK'><img src="__PUBLIC__/www/images/index_icon4.png" alt="" /></a></div>
+        <div><a href="{$youtube}" target='_BLANK'><img src="__PUBLIC__/www/images/index_icon5.png" alt="" /></a></div>
+        <div><a href="{$ins}" target='_BLANK'><img src="__PUBLIC__/www/images/index_icon6.png" alt="" /></a></div>
+    </div>
+</div>
+<div class="footer">
+{$cop}
+</div>
+<!--TOP键-->
+<img src="__PUBLIC__/www/images/top.png" alt="" class="top_index">
+<!--Inquire Now-->
+<div class="float-form">
+    <div class="show-btn" style="display: block;">
+        INQUIRE NOW!
+    </div>
+    <div class="show-form" style="display: none; ">
+        <span class="X">X</span>
+        <h3>CONTACT US</h3>
+        <form name="form" method="post" action="index.php?g=Home&a=message" id="tan_form" enctype="multipart/form-data">
+            <input name="forward" type="hidden" value="{$_SERVER['SERVER_NAME']}{if $catid}/index.php?m={$Categorys[$catid]['module']}&a=index&id={$catid}{else}/index.php{/if}"/>
+            <input type="text" name="name" id="name_tan" placeholder="name">
+            <input type="text" name="phone" id="phone_tan" placeholder="Phone">
+            <input type="text" name="email" id="mail_tan" placeholder="Email">
+             <!--<input type="file" name="files" />-->
+            <textarea name="message" id="message_tan" placeholder="Your Message"></textarea>
+            <input id="form_submit" type="submit" class="index_send" value="SUBMIT">
+        </form>
+    </div>
+</div>
+</body>
+<script src='__PUBLIC__/www/js/jquery-2.2.0.min.js'></script>
+<script src='__PUBLIC__/www/js/bootstrap.min.js'></script>
+<script src='__PUBLIC__/www/js/swiper.min.js'></script>
+<script src='__PUBLIC__/www/js/wow.min.js'></script>
+<script src='__PUBLIC__/www/js/main.js'></script>
+<script type="text/javascript">
+//导航栏的切换
+     $(window).scroll(function () {
+                var h = $(window).scrollTop();
+                if(h > 200){
+                    $('.header2').fadeOut();
+                    $('.header').fadeIn();
+                }else{
+                    $('.header').fadeOut();
+                    $('.header2').fadeIn();
+                }
+          });
+
+</script>
+<script>
+    $('.detail_Specification img').eq(0).click(function(){
+        var path1=$(".detail_Specification img").eq(0).attr("src");
+        var url1 = 'http://<?php echo $_SERVER["HTTP_HOST"]?>'+path1;
+        window.open(url1,'_blank');
+    });
+
+    $('.detail_Specification img').eq(1).click(function(){
+        var path2=$(".detail_Specification img").eq(1).attr("src");
+        var url2 = 'http://<?php echo $_SERVER["HTTP_HOST"]?>'+path2;
+        window.open(url2,'_blank');
+    });
+</script>
+</html>
