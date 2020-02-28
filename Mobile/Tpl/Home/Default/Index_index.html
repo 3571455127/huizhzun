@@ -1,68 +1,88 @@
-
-
-    <div class="index">
-        <!-- banner 轮播 -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                    <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 2" key="n">
+<div class="index">
+    <!-- banner 轮播 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 2" key="n">
                 <div class="swiper-slide">
                     <img src="{$r.pic}" alt="{$r.title}">
                     <a href="#contact" class="btn-contact"></a>
                 </div>
-        </YP:list> 
+            </YP:list>
 
-            </div>
-            <div class="swiper-pagination"></div>
         </div>
+        <div class="swiper-pagination"></div>
+    </div>
 
-        <!-- application -->
-        <div class="application">
-<?php getcatvar('page','id = 74','pcont');?>
-        </div>
+    <!-- application -->
+    <div class="application">
+        <?php getcatvar('page','id = 74','pcont');?>
+    </div>
 
-        <!-- advantages -->
-        <div class="advantages">
-            <?php getcatvar('page','id = 108','pcont');?>
-        </div>
+    <!-- advantages -->
+    <div class="advantages">
+        <?php getcatvar('page','id = 108','pcont');?>
+    </div>
 
-        <!-- principle -->
-        <div class="principle">
-            <?php getcatvar('page','id = 78','pcont');?>
-        </div>
-
-
-        <!-- parameters-->
-        <div class="parameters">
-            <?php getcatvar('page','id = 110','pcont');?>
-        </div>
-
-
-        <!-- Contact Us -->
-        <div class="contact">
-            <a name="contact"></a>
-            <h3>Contact Us</h3>
-            <form method="post" class="clearfix" onsubmit="return beforeSubmit2(this);" action="index.php?g=Home&a=message">
-                <?php getcatvar('page','id = 111','pcont');?>
-                <div class="btn-box">
-                    <input type="submit" value="SUBMIT" class="submit-btn">
-                </div>
-            </form>
-        </div>
-
-        <!-- info -->
-        <div class="info">
-            <div class="box">
-                <ul>
-                    <li><span class="box-img"><img src="__PUBLIC__/wap/image/phone.png" alt=""> </span>{$phone} </li>
-                    <li> <span class="box-img"><img src="__PUBLIC__/wap/image/email.png" alt=""></span>{$email} </li>
-                    <li><span class="box-img"><img src="__PUBLIC__/wap/image/phone.png" alt=""></span>{$dianhua}</li>
-                    <li> <span class="box-img"><img src="__PUBLIC__/wap/image/email.png" alt=""></span>{$emaila}</li>
-                    <li> <span class="box-img"><img src="__PUBLIC__/wap/image/www.png" alt=""></span>{$gwdz}</li>
-                </ul>
-                <p></p>
-            </div>
-            <div class="copy">{$cop}</div>
-        </div>
+    <!-- principle -->
+    <div class="principle">
+        <?php getcatvar('page','id = 78','pcont');?>
     </div>
 
 
+    <!-- parameters-->
+    <div class="parameters">
+        <?php getcatvar('page','id = 110','pcont');?>
+    </div>
+
+
+    <div class="about">
+        <h3>About Us</h3>
+        <div class="content">
+            <p>
+                Conprofe Technology Group is a leading global manufacturer of green and intelligent manufacturing
+                solutions, with its headquarters located in Guangzhou Science City and eleven subsidiaries around the
+                world.
+            </p>
+            <p>
+                Conprofe Technology Group has been adhering to the development concept of "CONVERGING of Global
+                Resources, PROFESSIONAL as Industry Leader" since it was founded more than decade ago. The group has
+                developed into three business units of green ultrasonic tools, intelligent equipment and green
+                ultrasonic CNC machine tools; the products of which cover superhard tools, threading tools, precision
+                tool holders, green machining, ultrasonic machining, industrial robots,
+                precision mechanical components, intelligent factory and green ultrasonic CNC machine tools. The group’s
+                customers mainly come from consumer electronics, automotive, medical equipment, home appliance,
+                aerospace, general precision manufacturing and so on.
+            </p>
+        </div>
+        <div class="box">
+            <img src="__PUBLIC__/wap/image/abouts.png" alt="">
+        </div>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="contact">
+        <a name="contact"></a>
+        <h3>Contact Us</h3>
+        <form method="post" class="clearfix" onsubmit="return beforeSubmit2(this);" action="index.php?g=Home&a=message">
+            <?php getcatvar('page','id = 111','pcont');?>
+            <div class="btn-box">
+                <input type="submit" value="SUBMIT" class="submit-btn">
+            </div>
+        </form>
+    </div>
+
+    <!-- info -->
+    <div class="info">
+        <div class="box">
+            <ul>
+                <li><span class="box-img"><img src="__PUBLIC__/wap/image/phone.png" alt=""> </span>{$phone} </li>
+                <li> <span class="box-img"><img src="__PUBLIC__/wap/image/email.png" alt=""></span>{$email} </li>
+                <li><span class="box-img"><img src="__PUBLIC__/wap/image/phone.png" alt=""></span>{$dianhua}</li>
+                <li> <span class="box-img"><img src="__PUBLIC__/wap/image/email.png" alt=""></span>{$emaila}</li>
+                <li> <span class="box-img"><img src="__PUBLIC__/wap/image/www.png" alt=""></span>{$gwdz}</li>
+            </ul>
+            <p></p>
+        </div>
+        <div class="copy">{$cop}</div>
+    </div>
+</div>

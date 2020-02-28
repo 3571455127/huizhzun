@@ -4,7 +4,8 @@ body {
 }
 
 /* index */
-.index .swiper-slide img {
+.index .swiper-slide img,
+.index .about img {
     max-width: 100%;
     height: auto;
 }
@@ -40,7 +41,8 @@ body {
 .index .advantages h3,
 .index .principle h3,
 .index .parameters h3,
-.index .contact h3 {
+.index .contact h3,
+.index .about h3 {
     text-transform: capitalize;
     font-size: 18px;
     color: #07b49a;
@@ -55,7 +57,8 @@ body {
 .index .advantages h3::after,
 .index .principle h3::after,
 .index .parameters h3::after,
-.index .contact h3::after {
+.index .contact h3::after,
+.index .about h3::after {
     content: "";
     width: 48%;
     height: 2px;
@@ -96,7 +99,6 @@ body {
 .index .application .box .left {
     width: 50%;
     float: left;
-
     padding-top: 10px;
 
 }
@@ -121,7 +123,8 @@ body {
 .index .advantages h3,
 .index .principle h3,
 .index .parameters h3,
-.index .contact h3 {
+.index .contact h3,
+.index .about h3 {
     color: #fff;
     height: 60px;
     line-height: 55px;
@@ -131,7 +134,8 @@ body {
 .index .advantages h3::after,
 .index .principle h3::after,
 .index .parameters h3::after,
-.index .contact h3::after {
+.index .contact h3::after,
+.index .about h3::after {
     background-color: #fff;
     bottom: 10px;
 }
@@ -327,4 +331,22 @@ body {
     text-transform: uppercase;
     background: linear-gradient(to right, #09b893, #0798ae);
     color: #fff;
+}
+
+.index .about .content {
+    padding: 5px;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #120E0E;
+    padding: 5px 4%;
+    box-sizing: border-box;
+}
+
+.index .about .content p:first-child {
+    padding-bottom: 15px;
+}
+
+.index .about .content,
+.index .about .box {
+    padding: 3%;
 }

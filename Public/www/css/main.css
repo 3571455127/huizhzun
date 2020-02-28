@@ -179,7 +179,7 @@ body {
 } */
 
 header .logo {
-    padding: 28px 150px 28px 0;
+    padding: 28px 90px 28px 0;
 }
 
 header .nav li {
@@ -198,8 +198,8 @@ header .nav .nav-active {
 header .nav li a {
     display: block;
     height: 70px;
-    padding: 0 25px;
-    font-size: 20px;
+    padding: 0 22px;
+    font-size: 18px;
     color: #000;
     font-weight: 600;
     text-transform: uppercase;
@@ -305,7 +305,8 @@ header .nav li:nth-child(5) a {
 .index .advantages h3,
 .index .principle h3,
 .index .parameters h3,
-.index .contact h3 {
+.index .contact h3,
+.index .about h3 {
     text-align: center;
     color: #fff;
     text-transform: capitalize;
@@ -321,7 +322,8 @@ header .nav li:nth-child(5) a {
 .index .advantages h3::after,
 .index .principle h3::after,
 .index .parameters h3::after,
-.index .contact h3::after {
+.index .contact h3::after,
+.index .about h3::after {
     content: "";
     width: 400px;
     height: 4px;
@@ -364,6 +366,7 @@ header .nav li:nth-child(5) a {
     padding: 10px 0;
     list-style-image: url("../images/disc.png");
 }
+
 
 .index .principle .box {
     padding: 30px 0;
@@ -422,6 +425,25 @@ header .nav li:nth-child(5) a {
 
 .index .principle .box .box-imgs {
     padding-top: 15%;
+}
+
+.index .about .box .txt {}
+
+.index .about .box {
+    padding: 30px 0;
+}
+
+.index .about .box p {
+    line-height: 1.4;
+    font-size: 18px;
+    color: #434343;
+    padding: 10px 0;
+}
+
+
+.index .about .box img {
+    max-width: 100%;
+    height: auto;
 }
 
 .index .contact form {
@@ -559,11 +581,13 @@ header .nav li:nth-child(5) a {
     }
 
     header .logo {
-        padding-right: 60px;
+        padding-right: 0;
     }
-
+    header .logo img{
+        width: 80%;
+    }
     header .nav li a {
-        font-size: 18px;
+        font-size: 15px;
         padding: 0 12px;
     }
 
@@ -575,8 +599,9 @@ header .nav li:nth-child(5) a {
         height: auto;
         padding: 10px 0;
     }
-    .index .info .box ul{
-        padding-left:12%;
+
+    .index .info .box ul {
+        padding-left: 12%;
     }
 
     .index .info .box li {
@@ -587,11 +612,5 @@ header .nav li:nth-child(5) a {
         text-align: left;
     }
 
-
-
-
-    /* .index .info .box li {
-        font-size: 13px;
-    } */
 
 }
