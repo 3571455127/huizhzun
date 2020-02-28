@@ -95,10 +95,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div><?php endforeach; endif;?> 
             </div>
             <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
+<!--            <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+             Add Pagination 
+            <div class="swiper-pagination"></div>-->
         </div>
 
         <!-- application -->
