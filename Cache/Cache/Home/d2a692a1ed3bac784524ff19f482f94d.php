@@ -202,7 +202,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <p></p>
         </div>
-        <div class="copy"><?php echo ($cop); ?></div>
+        <!-- <div class="copy"><?php echo ($cop); ?></div> -->
+        <div class="widescreens">
+            <div class="copy">No.6, 2nd Nanyun Rd, Science City, Hi-tech Development Zone, Guangzhou, Guangdong, PRC
+            </div>
+        </div>
+
+
     </div>
 
     <!-- gotop -->
