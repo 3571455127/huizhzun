@@ -21,17 +21,17 @@
 </div>
 <script type="text/javascript" src="__PUBLIC__/www/js/jquery-3.3.1.min.js"></script>
 <script>
-    // $(function () {
-    //     setTimeout("lazyGo();", 1000);
-    // });
+    $(function () {
+        setTimeout("lazyGo();", 1000);
+    });
 
-    // function lazyGo() {
-    //     var sec = $("#sec").text();
-    //     $("#sec").text(--sec);
-    //     if (sec > 0)
-    //         setTimeout("lazyGo();", 1000);
-    //     else
+    function lazyGo() {
+        var sec = $("#sec").text();
+        $("#sec").text(--sec);
+        if (sec > 0)
+            setTimeout("lazyGo();", 1000);
+        else
 
-    //         window.location = "https://www.conprofetech.cn/";
-    // }
+            window.location = "https://www.conprofetech.cn/";
+    }
 </script>
