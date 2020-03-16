@@ -33,6 +33,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MNFHBRX');</script>
 <!-- End Google Tag Manager -->
+<script>
+     function IsPC() {
+          var userAgentInfo = navigator.userAgent;
+          var Agents = ["Android", "iPhone",
+                      "SymbianOS", "Windows Phone",
+                      "iPad", "iPod"];
+          var flag = true;
+          for (var v = 0; v < Agents.length; v++) {
+              if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                  flag = false;
+                 break;
+             }
+         }
+         return flag;
+      }
+      var isp = IsPC();
+      if(!isp){
+            window.location.href="/mobile.php";
+      }
+</script>
 </head>
 
 <body>

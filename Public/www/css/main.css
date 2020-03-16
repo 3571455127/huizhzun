@@ -630,3 +630,27 @@ header .nav li:nth-child(5) a {
         font-size: 18px;
     }
 }
+
+/* thank */
+.thank {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.thank h5,
+.thank p {
+    line-height: 1.4;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+.thank .back {
+    padding-left: 10px;
+    width: 32px;
+    max-width: 100%;
+    height: auto;
+}
+
+#sec {
+    color: #0798ae;
+}

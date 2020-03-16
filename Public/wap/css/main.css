@@ -351,3 +351,32 @@ body {
 .index .about .box {
     padding: 3%;
 }
+
+.thank {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.thank h5,
+.thank p {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #333;
+    padding: 2% 3%;
+}
+
+.thank p {
+    padding-top: 0;
+    font-size: 16px;
+}
+
+.thank .back {
+    padding-left: 10px;
+    width: 32px;
+    max-width: 100%;
+    height: auto;
+}
+
+#sec {
+    color: #0798ae;
+}
