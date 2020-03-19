@@ -129,8 +129,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- about -->
     <div class="about">
-        
         <?php getcatvar('page','id = 112','cont');?>
+    </div>
+
+    <!-- video -->
+    <div class="video">
+        <h3>COMRANY VIDEO</h3>
+        <iframe width="1140" height="700" src="https://www.youtube.com/embed/Stm8cuu8eCQ" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <!-- Contact Us -->
@@ -160,15 +166,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <ul class="clearfix">
                             <li><span class="box-img"><img src="__PUBLIC__/www/images/phone.png" alt=""> </span><?php echo ($phone); ?>
                             </li>
-                            <li> <span class="box-img"><img src="__PUBLIC__/www/images/email.png" alt=""></span><?php echo ($email); ?>
-                            </li>
+                            <li> <a href="mailto:<?php echo ($emaila); ?>" target="_blank"><span class="box-img"><img
+                                            src="__PUBLIC__/www/images/email.png" alt=""></span>(KR/JP)<?php echo ($email); ?>
+                                </a></li>
 
                             <li> <span class="box-img"><img src="__PUBLIC__/www/images/www.png" alt=""></span> <?php echo ($gwdz); ?>
                             </li>
                             <li><span class="box-img"><img src="__PUBLIC__/www/images/phone.png" alt=""></span>
                                 <?php echo ($dianhua); ?> </li>
-                            <li> <span class="box-img"><img src="__PUBLIC__/www/images/email.png"
-                                        alt=""></span><?php echo ($emaila); ?></li>
+                            <li> <a href="mailto:<?php echo ($emaila); ?>" target="_blank"><span class="box-img"><img
+                                            src="__PUBLIC__/www/images/email.png" alt=""></span>(EN)<?php echo ($emaila); ?></a></li>
 
 
                         </ul>
@@ -179,8 +186,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <p></p>
         </div>
-         <div class="widescreens">
-        <div class="copy"><?php echo ($cop); ?></div></div>
+        <div class="widescreens">
+            <div class="copy"><?php echo ($cop); ?></div>
+        </div>
     </div>
 
     <!-- gotop -->

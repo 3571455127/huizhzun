@@ -306,7 +306,8 @@ header .nav li:nth-child(5) a {
 .index .principle h3,
 .index .parameters h3,
 .index .contact h3,
-.index .about h3 {
+.index .about h3,
+.index .video h3 {
     text-align: center;
     color: #fff;
     text-transform: capitalize;
@@ -323,7 +324,7 @@ header .nav li:nth-child(5) a {
 .index .principle h3::after,
 .index .parameters h3::after,
 .index .contact h3::after,
-.index .about h3::after {
+.index .about h3::after .index .video h3::after {
     content: "";
     width: 400px;
     height: 4px;
@@ -653,4 +654,13 @@ header .nav li:nth-child(5) a {
 
 #sec {
     color: #0798ae;
+}
+
+.index .video {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.index .video>iframe {
+    padding: 30px 0;
 }

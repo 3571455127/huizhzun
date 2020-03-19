@@ -124,7 +124,8 @@ body {
 .index .principle h3,
 .index .parameters h3,
 .index .contact h3,
-.index .about h3 {
+.index .about h3,
+.index .video h3 {
     color: #fff;
     height: 60px;
     line-height: 55px;
@@ -135,7 +136,8 @@ body {
 .index .principle h3::after,
 .index .parameters h3::after,
 .index .contact h3::after,
-.index .about h3::after {
+.index .about h3::after,
+.index .video h3::after {
     background-color: #fff;
     bottom: 10px;
 }
@@ -379,4 +381,12 @@ body {
 
 #sec {
     color: #0798ae;
+}
+
+.index .video {
+    text-align: center;
+}
+
+.index .video>iframe {
+    padding-top: 30px;
 }

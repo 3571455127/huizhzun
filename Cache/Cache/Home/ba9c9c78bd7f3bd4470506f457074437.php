@@ -81,6 +81,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <?php getcatvar('page','id = 112','pcont');?>
     </div>
 
+    <!-- video -->
+    <div class="video">
+        <h3>COMRANY VIDEO</h3>
+        <iframe src="https://www.youtube.com/embed/Stm8cuu8eCQ" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
     <!-- Contact Us -->
     <div class="contact">
         <a name="contact"></a>
@@ -98,9 +105,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="box">
             <ul>
                 <li><span class="box-img"><img src="__PUBLIC__/wap/image/phone.png" alt=""> </span><?php echo ($phone); ?> </li>
-                <li> <span class="box-img"><img src="__PUBLIC__/wap/image/email.png" alt=""></span><?php echo ($email); ?> </li>
+                <li> <span class="box-img"><img src="__PUBLIC__/wap/image/email.png" alt=""></span>(KR/JP)<?php echo ($email); ?> </li>
                 <li><span class="box-img"><img src="__PUBLIC__/wap/image/phone.png" alt=""></span><?php echo ($dianhua); ?></li>
-                <li> <span class="box-img"><img src="__PUBLIC__/wap/image/email.png" alt=""></span><?php echo ($emaila); ?></li>
+                <li> <span class="box-img"><img src="__PUBLIC__/wap/image/email.png" alt=""></span>(EN)<?php echo ($emaila); ?></li>
                 <li> <span class="box-img"><img src="__PUBLIC__/wap/image/www.png" alt=""></span><?php echo ($gwdz); ?></li>
             </ul>
             <p></p>
