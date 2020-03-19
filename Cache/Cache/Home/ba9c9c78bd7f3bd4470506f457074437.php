@@ -60,6 +60,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <?php getcatvar('page','id = 74','pcont');?>
     </div>
 
+    <!-- video -->
+    <div class="video">
+        <h3>COMPANY VIDEO</h3>
+        <iframe src="https://www.youtube.com/embed/Stm8cuu8eCQ" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
     <!-- advantages -->
     <div class="advantages">
         <?php getcatvar('page','id = 108','pcont');?>
@@ -81,12 +89,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <?php getcatvar('page','id = 112','pcont');?>
     </div>
 
-    <!-- video -->
-    <div class="video">
-        <h3>COMRANY VIDEO</h3>
-        <iframe src="https://www.youtube.com/embed/Stm8cuu8eCQ" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
 
     <!-- Contact Us -->
     <div class="contact">
