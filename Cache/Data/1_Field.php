@@ -32,7 +32,7 @@
   \\\'enablekeylink\\\' => \\\'0\\\',
   \\\'replacenum\\\' => \\\'\\\',
   \\\'enablesaveimage\\\' => \\\'0\\\',
-  \\\'flashupload\\\' => \\\'0\\\',
+  \\\'flashupload\\\' => \\\'1\\\',
   \\\'alowuploadexts\\\' => \\\'\\\',
   \\\'alowuploadlimit\\\' => \\\'\\\',
 )', 'ispost' => '1', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'pcont' => array ( 'id' => '134', 'moduleid' => '1', 'field' => 'pcont', 'name' => '移动端内容', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'editor', 'setup' => 'array (
@@ -46,7 +46,7 @@
   \\\'enablekeylink\\\' => \\\'0\\\',
   \\\'replacenum\\\' => \\\'\\\',
   \\\'enablesaveimage\\\' => \\\'0\\\',
-  \\\'flashupload\\\' => \\\'0\\\',
+  \\\'flashupload\\\' => \\\'1\\\',
   \\\'alowuploadexts\\\' => \\\'\\\',
   \\\'alowuploadlimit\\\' => \\\'\\\',
 )', 'ispost' => '1', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), );?>
