@@ -57,13 +57,13 @@ function beforeSubmit2(form) {
         alert('The cellphone can not be empty');
         form.phone.focus();
         return false;
-    } else if (form.cellphone.value.length < 11) {
+    } else if (form.phone.value.length < 5) {
         alert('The phone is wrong');
         form.phone.focus();
         return false;
-    } else if (form.country.value == '') {
-        alert('The counntry can not be empty');
-        form.country.focus();
+    } else if (form.counntry.value == '') {
+        alert('The country can not be empty');
+        form.counntry.focus();
         return false;
     } else {
 
