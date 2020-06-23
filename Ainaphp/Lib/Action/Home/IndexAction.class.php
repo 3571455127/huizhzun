@@ -20,7 +20,7 @@ class IndexAction extends BaseAction
 		$count = $model->where('status=1')->count();// 查询满足要求的总记录数
 		$Adp_sql = $model->where('status=1')->getField('title',$count+1);
 		foreach ($Adp_sql as $value) {
-		sendmail($value,"Inquiry Product :guangduan.net", $body);
+		sendmail($value,"Conprofe Technology Group Co.,Ltd", $body);
 		}
 		
 	}
@@ -91,25 +91,46 @@ public function upload(){
    $files = $this->upload();               
 $_POST['files'] = $files['filepath'];
                 }
+                    //required=1 field moduleid=7 必填字段
+                $fields = M('field')->field('field')->where(array('moduleid'=>7,'required'=>1))->select();
+                $fields2 = array();
+                foreach($fields as $key=>$val){
+                    foreach($val as $k=>$v){
+                         $fields2[] = $v;
+                    }
+                }
+                foreach($_POST as $k=>$v){
+                    
+                    if(in_array($k,$fields2)){
+                        if(!$v){
+                            $this->error("Error of inquiry information！"); 
+                        }
+                    }
+                }
+                
+                            //屏蔽关键字
+            $shield = M('config')->where(array('lang'=>$_POST['lang'],'varname'=>'shield'))->getField('value');
+            $shieldarr = explode(' ',$shield);
+            unset($_POST['lang']);
+            foreach($shieldarr as $key=>$val){
+                   foreach($_POST as $k=>$v){
+                       if(stristr(strtolower($v), strtolower($val))) { 
+                            $this->error("Error of inquiry information！"); 
+                           }
+                   }
+            } 
 //		print_r($_POST);
 //                exit;
-		//判断post值为空或空格
-         $t = array_keys($_POST, '');//如果空格不算空，就用这条
-         $t = array_keys(array_map('trim', $_POST), '');//如果空格算空，就用这条
-         if($t) { //有空数据项
-          $this->error("Send failed!"); //值就是为空的项提示错误
-         }
+//		//判断post值为空或空格
+//         $t = array_keys($_POST, '');//如果空格不算空，就用这条
+//         $t = array_keys(array_map('trim', $_POST), '');//如果空格算空，就用这条
+//         if($t) { //有空数据项
+//          $this->error("Send failed!"); //值就是为空的项提示错误
+//         }
 		 
 		$ip = get_client_ip();
         $ADDRESS=$this->getAddressFromIp($ip);
-		
-		if(stristr($this->_POST('message'), 'www.FyLitCl7Pf7ojQdDUOLQOuaxTXbj5iNG.com')) { 
-          $this->error("Error of inquiry information！"); 
-         }
-		 
-		if($ADDRESS=="俄罗斯") { 
-          $this->error("The area is not in the service area！"); 
-        }
+
 		 
 		if(preg_match("/^[0-9-()+(^\s*)|(\s*$)]+$/",$this->_POST('phone'))){    
 
@@ -168,10 +189,10 @@ $_POST['files'] = $files['filepath'];
         }
 	}
 	
-	//根据ip地址获取地址信息
+//根据ip地址获取地址信息
 function getAddressFromIp($ip){
     $urlTaobao = 'http://ip.taobao.com/service/getIpInfo.php?ip='.$ip;
-    $urlSina = 'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip='.$ip;
+    $urlSina = 'http://whois.pconline.com.cn/ipJson.jsp?json=true&ip='.$ip;
     $json = file_get_contents($urlTaobao);
     $jsonDecode = json_decode($json);
     if($jsonDecode->code==0){//如果取不到就去取新浪的
@@ -182,16 +203,26 @@ function getAddressFromIp($ip){
         $IpAddress=$data['country'].$data['province'];
 		return  $IpAddress;
     }else{
-        $json = file_get_contents($urlSina);
-        $jsonDecode = json_decode($json);
-        $data['country'] = $jsonDecode->country;
-        $data['province'] = $jsonDecode->province;
-        $data['city'] = $jsonDecode->city;
-        $data['isp'] = $jsonDecode->isp;
-        $data['district'] = $jsonDecode->district;
-        $IpAddress=$data['country'].$data['province'];
+        
+        $json = $this->curlhttp($urlSina);
+        $IpAddress=$json->addr;
 		return  $IpAddress;
     }
+}
+function curlhttp($url,$post_data=''){
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_URL,$url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+        $rec = curl_exec($ch);
+         // 关闭cURL资源，并且释放系统资源
+            curl_close($ch);
+        //文本转码
+        $rec = mb_convert_encoding($rec, 'utf-8','GB2312');
+        $result = json_decode($rec);
+        return $result;
 }
 
 

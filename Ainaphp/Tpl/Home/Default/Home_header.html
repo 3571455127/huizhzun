@@ -9,54 +9,62 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <!-- wap -->
+    <meta name="wap-font-scale" content="no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="Robots" content="all">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>{if MODULE_NAME != 'Index'}{$seo_title}{else}{$site_name}{/if}</title>
-
-    <!-- css -->
-    <link rel="stylesheet" href="__PUBLIC__/www/css/swiper-4.5.0.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/www/css/swiper.min.css">
     <link rel="stylesheet" href="__PUBLIC__/www/css/bootstrap.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/www/css/animate.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/www/css/reset.css">
     <link rel="stylesheet" href="__PUBLIC__/www/css/main.css">
-    <style>
-        @font-face {
-            font-family: 'SourceHanSansCN';
-            src: url('__PUBLIC__/wap/font/SourceHanSansCN-Regular.otf');
-
-        }
-    </style>
-
-    <!-- Google Tag Manager -->
+    <script src="__PUBLIC__/www/js/jquery.min.js"></script>
+        <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MNFHBRX');</script>
 <!-- End Google Tag Manager -->
-<script>
-     function IsPC() {
-          var userAgentInfo = navigator.userAgent;
-          var Agents = ["Android", "iPhone",
-                      "SymbianOS", "Windows Phone",
-                      "iPad", "iPod"];
-          var flag = true;
-          for (var v = 0; v < Agents.length; v++) {
-              if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                  flag = false;
-                 break;
-             }
-         }
-         return flag;
-      }
-      var isp = IsPC();
-      if(!isp){
-            window.location.href="/mobile.php";
-      }
-</script>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar-example">
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNFHBRX"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img alt="logo" class="logo" src="__PUBLIC__/www/images/logo.png"></a>
+                </div>
+
+                <div id="navbar-example">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#home">Home</a></li>
+                            <li><a href="#about">about Us</a></li>
+                            <li><a href="#product">Product</a></li>
+                            <li><a href="#working">Working Principle</a></li>
+                            <li><a href="#advantages">Advantages</a></li>
+                            <li><a href="#contact">Contact us</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </nav>
+    </header>

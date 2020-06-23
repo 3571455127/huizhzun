@@ -38,7 +38,7 @@
                     <dd {if $n==2}style="display:block;"{/if}>
                         <ul>
                         <volist name="r[nav]" id="item">
-                            <li id="li_{$item['id']}"><span  onclick="javascript:gourl('{$item['id']}','{:U($item['model'].'/'.$item['action'],$item['data'])}')"><a href="{:U($item['model'].'/'.$item['action'],$item['data'])}" class="name" target="main"><i></i>{$item['name']}</a>{if $r[bnav]['model']=='Category'}<a href="{:U($item['model'].'/add',$item['data'])}" id="{$i}" class="add" target="main">{:L(add)}</a>{/if}</span></li>
+                            <li id="li_{$item['id']}"><span  onclick="javascript:gourl('{$item['id']}','{:U($item['model'].'/'.$item['action'],$item['data'])}')"><a href="{:U($item['model'].'/'.$item['action'],$item['data'])}" class="name" target="main"><i></i>{$item['name']|str_cut=###,20,'..'}</a>{if $r[bnav]['model']=='Category'}<a href="{:U($item['model'].'/add',$item['data'])}" id="{$i}" class="add" target="main">{:L(add)}</a>{/if}</span></li>
                         </volist>
                         </ul>
                     </dd>

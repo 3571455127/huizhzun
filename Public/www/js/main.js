@@ -1,45 +1,76 @@
-
 $(function () {
 
-    // index
-    // var swiper = new Swiper('.index .swiper-container', {
-    //     autoplay: true,
-    //     loop: true,
-    //     pagination: {
-    //         el: '.index .swiper-pagination',
-    //     },
-    //     navigation: {
-    //         nextEl: '.index .swiper-button-next',
-    //         prevEl: '.index .swiper-button-prev',
-    //     },
-    // });
+    // pc轮播
+    var mySwiper = new Swiper('.pc-banner .swiper-container', {
+        loop: true,
+        autoplay: true,
+        speed: 1200,
+        navigation: {
+            nextEl: '.pc-banner .swiper-button-next',
+            prevEl: '.pc-banner .swiper-button-prev',
+        },
+        pagination: {
+            el: '.pc-banner .swiper-pagination',
+            clickable: true,
+        },
+    })
 
-    // new WOW().init();
+
+    // wap 轮播
+    // wap-banner
+    var mySwiper = new Swiper('.wap-banner .swiper-container', {
+        loop: true,
+        autoplay: true,
+        speed: 1200,
+        pagination: {
+            el: '.wap-banner .swiper-pagination',
+            clickable: true,
+        },
+    })
+    // partenr
+    var mySwiper = new Swiper('.about .swiper-container', {
+        loop: true,
+        autoplay: true,
+        speed: 1200,
+        pagination: {
+            el: '.about .swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.about .swiper-button-next',
+            prevEl: '.about .swiper-button-prev',
+        },
+    })
+
+    // wap右上导航
+    $(".nav li").click(function () {
+        $(this).parent().parent().removeClass("in");
+    })
 
 
-    // 返回顶部
+    // 滚动监听
+    $('body').scrollspy({
+        target: '#navbar-example'
+    })
+    // top
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 10) {
+        if ($(window).scrollTop() > 100) {
             $(".goTop").fadeIn(1000);
-
+            $(".navbar").addClass("navbar-fixed-top");
         } else {
             $(".goTop").fadeOut(1000);
+            $(".navbar").removeClass("navbar-fixed-top");
         }
     });
+
     $(".goTop").click(function () {
         $("html,body").animate({
             scrollTop: 0
-        }, 500);
+        }, 1000);
     });
 
-    $("header .nav li").click(function () {
-        $(this).addClass("nav-active").siblings().removeClass("nav-active");
-    })
-    $("header .nav li").mouseover(function () {
-        $(this).addClass("nav-active").siblings().removeClass("nav-active");
-    })
-
-
+    // 数字
+    $('.counter').countUp();
 })
 
 var submitcount2 = 0;
@@ -70,9 +101,9 @@ function beforeSubmit2(form) {
         alert('The phone is wrong');
         form.phone.focus();
         return false;
-    } else if (form.country.value == '') {
+    } else if (form.con.value == '') {
         alert('The country can not be empty');
-        form.country.focus();
+        form.con.focus();
         return false;
     } else {
 
@@ -87,3 +118,4 @@ function beforeSubmit2(form) {
     }
 
 }
+

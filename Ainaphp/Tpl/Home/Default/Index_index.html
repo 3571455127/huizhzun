@@ -1,141 +1,164 @@
-<header>
-    <div class="widescreen">
-        <div class="container-full">
-            <div class="row-full clearfix">
-                <!-- logog -->
-                <div class="logo pull-left">
-                    <a href="">
-                        <img src="__PUBLIC__/www/images/logo.png" alt="">
-                    </a>
-                </div>
 
-                <!-- nav -->
-                <div class="nav pull-left">
-                    <ul class="clearfix">
-                        <li class="nav-active"><a href="javascript:;">HOME</a></li>
-                        <li><a href="#application">application</a></li>
-                        <li><a href="#advantages">advantages</a></li>
-                        <li><a href="#working">Working Principle</a></li>
-                        <li><a href="#technical">Technical Parameters</a></li>
-                        <li><a href="#about">ABOUT US</a></li>
-                        <li><a href="#contact">Contact us</a></li>
-                    </ul>
-                </div>
 
-            </div>
-        </div>
+    <div class="index">
+
+        <!-- banner  -->
+        <div id="home" class="banner">
+            <!-- pc -->
+            <div class="pc-banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+<YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 1" key="n">
+    <!-- start -->
+    <div class="swiper-slide">
+        <a href="#contant">
+            <img src="{$r.pic}" alt="{$r.title}"></a>
+        </a>
     </div>
+    <!-- end -->
+</YP:list>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-btn">
+                        <div class="swiper-button-prev swiper-button-white"></div>
+                        <div class="swiper-button-next swiper-button-white"></div>
+                    </div>
 
-</header>
-
-<div class="index">
-    <!-- Swiper -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-
-            <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 1" key="n">
-                <div class="swiper-slide">
-                    <a href="{$r.link}" title="{$r.title}"><img src="{$r.pic}" alt="{$r.title}"></a>
-                    <a class="contact-btn" href="#contact"></a>
                 </div>
+            </div>
+            <!-- wap -->
+            <div class="wap-banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+<YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 2" key="n">
+                 <!-- start -->
+    <div class="swiper-slide">
+        <a href="#contant">
+            <img src="{$r.pic}" alt="{$r.title}"></a>
+        </a>
+    </div>
+    <!-- end -->
             </YP:list>
-        </div>
-        <!-- Add Arrows -->
-        <!--            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-             Add Pagination 
-            <div class="swiper-pagination"></div>-->
-    </div>
-
-    <!-- application -->
-    <div class="application">
-        <?php getcatvar('page','id = 74','cont');?>
-    </div>
-
-    <!-- video -->
-    <div class="video" style="padding-top: 0;">
-        <h3>COMPANY VIDEO</h3>
-        <iframe width="800" height="510" src="https://www.youtube.com/embed/Stm8cuu8eCQ" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <!-- advantages -->
-    <div class="advantages">
-        <?php getcatvar('page','id = 108','cont');?>
-    </div>
-
-    <!-- principle -->
-    <div class="principle">
-        <?php getcatvar('page','id = 78','cont');?>
-    </div>
-
-    <!-- parameters-->
-    <div class="parameters">
-        <?php getcatvar('page','id = 110','cont');?>
-    </div>
-
-    <!-- about -->
-    <div class="about">
-        <?php getcatvar('page','id = 112','cont');?>
-    </div>
-
-
-
-    <!-- Contact Us -->
-    <div class="contact">
-        <a name="contact"></a>
-        <h3>Contact Us</h3>
-        <div class="container">
-            <div class="row">
-                <form method="post" class="clearfix" onsubmit="return beforeSubmit2(this);"
-                    action="index.php?g=Home&a=message">
-                    <?php getcatvar('page','id = 111','cont');?>
-                    <div class="btn-box">
-                        <input type="submit" value="SUBMIT" class="submit-btn">
                     </div>
-
-                </form>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- info -->
-    <div class="info">
-        <div class="box">
-            <div class="widescreen">
-                <div class="container-full">
-                    <div class="row-full">
-                        <ul class="clearfix">
-                            <li><span class="box-img"><img src="__PUBLIC__/www/images/phone.png" alt=""> </span>{$phone}
-                            </li>
-                            <li> <a href="mailto:{$emaila}" target="_blank"><span class="box-img"><img
-                                            src="__PUBLIC__/www/images/email.png" alt=""></span>(KR/JP){$email}
-                                </a></li>
+        <!-- about -->
+        <div>
+            <a id="about"></a>
+            <?php getcatvar('page','id = 112','cont');?>
+        </div>
 
-                            <li> <span class="box-img"><img src="__PUBLIC__/www/images/www.png" alt=""></span> {$gwdz}
-                            </li>
-                            <li><span class="box-img"><img src="__PUBLIC__/www/images/phone.png" alt=""></span>
-                                {$dianhua} </li>
-                            <li> <a href="mailto:{$emaila}" target="_blank"><span class="box-img"><img
-                                            src="__PUBLIC__/www/images/email.png" alt=""></span>(EN){$emaila}</a></li>
+        <!-- product -->
+        <div>
+            <a id="product"></a>
+            <div class="product">
+                <div class="container">
+                    <div class="row">
+                        <h3>Product</h3>
+                        <YP:list order="listorder desc" catid="113" id="r" limit="10" field="cont,listorder">
+                        <div class="content clearfix">
+                           {$r.cont}
+                        </div>
+                        </YP:list>
 
+                    </div>
+                </div>
+                        <!-- professionals -->
+                <div class="probg clearfix">
+            <?php getcatvar('page','id = 74','cont');?>
+                </div>
 
-                        </ul>
+            </div>
+        </div>
+
+        <!-- working -->
+        <div>
+            <a id="working"></a>
+            <div class="working">
+                <div class="container">
+                    <div class="row">
+            <?php getcatvar('page','id = 108','cont');?>
                     </div>
                 </div>
             </div>
-
-
-            <p></p>
         </div>
-        <div class="widescreens">
-            <div class="copy">{$cop}</div>
-        </div>
-    </div>
 
-    <!-- gotop -->
-    <div class="goTop">
-        <i class="topIcon"></i>
-        <p>TOP</p>
+        <!-- advantages -->
+        <div>
+            <a id="advantages"></a>
+            <div class="advantages">
+                <div class="container">
+                    <div class="row">
+            <?php getcatvar('page','id = 78','cont');?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- choose -->
+        <div class="choose">
+            <div class="container">
+                <div class="row">
+            <?php getcatvar('page','id = 110','cont');?>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certificated  -->
+            <?php getcatvar('page','id = 114','cont');?>
+
+        <!-- contact -->
+        <div>
+            <a id="contact"></a>
+            <div class="contact">
+                <div class="container">
+                    <div class="row">
+                        <form method="post" class="clearfix" onsubmit="return beforeSubmit2(this);"
+                            action="index.php?g=Home&a=message">
+                            <div class="left col-lg-4 col-md-4 col-sm-4">
+                                <h5>contact us for all your needs!</h5>
+                                <p> - you can get free quote now </p>
+                            </div>
+                            <div class="right col-lg-8 col-md-8 col-sm-8">
+                                <div class="clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="box ">
+                                            <p>Name <span>*</span></p> <input type="text" name="name">
+                                        </div>
+                                        <div class="box">
+                                            <p>Company <span>*</span></p> <input type="text" name="com">
+                                        </div>
+                                        <div class="box">
+                                            <p> Cellphone <span>*</span></p> <input type="text" name="phone">
+                                        </div>
+                                        <div class="box">
+                                            <p> Website or Social Media Account</p> <input type="text" name="account">
+                                        </div>
+                                        <div class="box">
+                                            <p> Country <span>*</span></p> <input type="text" name="country">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="box">
+                                            <p> Email <span>*</span></p> <input type="text" name="email">
+                                        </div>
+                                        <div class="box">
+                                            <p> Message for Max Prefab </p> <textarea name="message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <input type="submit" value="Send your message" class="submit-btn">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-</div>

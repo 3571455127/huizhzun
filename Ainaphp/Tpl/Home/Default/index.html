@@ -1,352 +1,381 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="{$seo_keywords}" />
-    <meta name="description" content="{$seo_description}" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <title>index</title>
-
-    <!-- css -->
-    <link rel="stylesheet" href="./css/swiper-4.5.0.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/animate.min.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-
-<body>
-    <header>
-        <div class="widescreen">
-            <div class="container-full">
-                <div class="row-full clearfix">
-                    <!-- logog -->
-                    <div class="logo pull-left">
-                        <a href="">
-                            <img src="images/logo.png" alt="">
-                        </a>
-                    </div>
-
-                    <!-- nav -->
-                    <div class="nav pull-left">
-                        <ul class="clearfix">
-                            <li class="nav-active"><a href="javascript:;">HOME</a></li>
-                            <li><a href="#application">application</a></li>
-                            <li><a href="#advantages">advantages</a></li>
-                            <li><a href="#working">Working Principle</a></li>
-                            <li><a href="#technical">Technical Parameters</a></li>
-                            <li><a href="#contact">Contact us</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </header>
 
     <div class="index">
-        <!-- Swiper -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="" title=""> <img src="images/banner.png" alt=""></a>
 
-                </div>
-                <div class="swiper-slide">
-                    <a href="" title=""><img src="images/banner.png" alt=""></a>
+        <!-- banner  -->
+        <div id="home" class="banner">
+            <!-- pc -->
+            <div class="pc-banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+<YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 1" key="n">
+    <!-- start -->
+    <div class="swiper-slide">
+        <a href="#contant">
+            <img src="{$r.pic}" alt="{$r.title}"></a>
+        </a>
+    </div>
+    <!-- end -->
+</YP:list>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-btn">
+                        <div class="swiper-button-prev swiper-button-white"></div>
+                        <div class="swiper-button-next swiper-button-white"></div>
+                    </div>
 
                 </div>
             </div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+            <!-- wap -->
+            <div class="wap-banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+<YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 2" key="n">
+                 <!-- start -->
+    <div class="swiper-slide">
+        <a href="#contant">
+            <img src="{$r.pic}" alt="{$r.title}"></a>
+        </a>
+    </div>
+    <!-- end -->
+            </YP:list>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
         </div>
 
-        <!-- application -->
-        <div class="application">
-            <a name="application"></a>
-            <div class="container">
-                <div class="row">
-                    <h3>Application - Mask Ultrasonic Welding</h3>
-                    <div class="title">Applications: Mask/Medical Protective Clothing</div>
-                    <div class="box clearfix">
-                        <div class="txt col-lg-6 col-md-6">
-                            <ul>
-                                <li>① Nose bridge welding</li>
-                                <li>② Welding after hemming</li>
-                                <li>③ Breathing valve welding </li>
-                                <li>④ Multilayer rolling welding</li>
-                                <li>⑤ Ear-loop welding </li>
-                            </ul>
+        <!-- about -->
+        <div>
+            <a id="about"></a>
+            <?php getcatvar('page','id = 112','cont');?>
+        </div>
+
+        <!-- product -->
+        <div>
+            <a id="product"></a>
+            <div class="product">
+                <div class="container">
+                    <div class="row">
+                        <h3>Product</h3>
+                        <YP:list order="listorder desc" catid="112" id="r" limit="10" field="cont,listorder">
+                        <div class="content clearfix">
+                           {$r.cont}
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                            <img src="images/application.png" alt="">
+                        </YP:list>
+
+                    </div>
+                </div>
+                <div class="probg clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-6"><img src="/Public/www/images/probg.png" alt=""></div>
+                    <div class="txts col-lg-6 col-md-6 col-sm-6">
+                        <h6>The Information You Want To Know -from our professionals.</h6>
+                        <ul>
+                            <li>No MOQ: customers can order according to demand.</li>
+                            <li>Regular terms of sale: EXW.</li>
+                            <li>Export orders: generally shipped by sea, urgent orders
+                                are specially treated according to customer needs.</li>
+                            <li>Production cycle: different for each order,
+                                depending on the actual order product.</li>
+                            <li>Payment method: 100% will be paid
+                                in one lump sum before delivery.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- working -->
+        <div>
+            <a id="working"></a>
+            <div class="working">
+                <div class="container">
+                    <div class="row">
+                        <h3>Ultrasonic Welding System - Working Principle</h3>
+                        <div class="content clearfix">
+                            <div class="img col-lg-6 col-md-6 col-sm-6">
+                                <div class="box-img"><img src="/Public/www/images/working.png" alt=""></div>
+                            </div>
+                            <div class="txt col-lg-6 col-md-6 col-sm-6">
+                                <ul>
+                                    <li>Ultrasonic generator transforms low-frequency alternating current into
+                                        high-frequency alternating current, and transforms electric energy into
+                                        mechanical energy through the transducer</li>
+                                    <li>When the welding head acts on the contact surface of thermoplastic, it will
+                                        produce tens of thousands of high frequency vibrations per second</li>
+                                    <li>The high frequency vibration transmits ultrasonic energy to welding area , local
+                                        high temperature is created due to mechanical force and friction between the
+                                        plastic parts</li>
+                                    <li>Pressure lasts for a few seconds, ultrasonic welding making it solidify, forming
+                                        a solid molecular chain and realizing welding</li>
+
+                                </ul>
+                            </div>
                         </div>
-                        <div class="logo-g"><img src="images/logo-g.png" alt=""></div>
                     </div>
                 </div>
             </div>
-
         </div>
 
         <!-- advantages -->
-        <div class="advantages">
-            <a name="advantages"></a>
-            <h3>Ultrasonic Welding System- Advantages</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="list clearfix">
-                        <div class="box col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="box-img">
-                                <img src="images/advantages2.png" alt="">
+        <div>
+            <a id="advantages"></a>
+            <div class="advantages">
+                <div class="container">
+                    <div class="row">
+                        <h3>Ultrasonic Welding System- Advantages</h3>
+                        <div class="content clearfix">
+                            <div class="left col-lg-6 col-md-6 col-sm-6">
+                                <div class="box-img"><img src="/Public/www/images/adva.png" alt=""></div>
+                                <h6>Mask machine production advantages</h6>
+                                <div class="boxs">
+                                    <p>Safe</p>
+                                    <ul>
+                                        <li>No solvents, adhesives or other auxiliary materials required</li>
+                                        <li>No pollution</li>
+                                        <li>Environmental-friendly</li>
+                                    </ul>
+                                </div>
+                                <div class="boxs">
+                                    <p>Intelligent</p>
+                                    <ul>
+                                        <li>Automatic frequency search, automatic frequency tracking, no need for manual
+                                            adjustment</li>
+                                        <li>No Ultrasonic amplitude is stepless and adjustable from 0% - 100% ,
+                                            intelligently matching of different product types</li>
+                                        <li>More than 300 welding records</li>
+                                    </ul>
+                                </div>
+                                <div class="boxs">
+                                    <p>Efficient</p>
+                                    <ul>
+                                        <li>Replace manual welding</li>
+                                        <li>Increase efficiency</li>
+                                        <li>Lower the cost</li>
+                                    </ul>
+                                </div>
+
                             </div>
-                            <ul>
-                                <li>No solvents, adhesives or other auxiliary materials required</li>
-                                <li>No pollution</li>
-                                <li>Environmental-friendly</li>
-                            </ul>
-                        </div>
-                        <div class="box col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="box-img">
-                                <img src="images/advantages3.png" alt="">
+                            <div class="right col-lg-6 col-md-6 col-sm-6">
+                                <div class="box-img"><img src="/Public/www/images/adva.png" alt=""></div>
+                                <h6>Advantages of ultrasonic machining</h6>
+                                <div class="boxs">
+                                    <ul>
+                                        <li>Easy to achieve ultrasonic machining without replacing the customer's
+                                            machine tool spindle</li>
+                                        <li>Especially suitable for precision machining of hard and brittle materials.
+                                            Can improve machining accuracy and machining efficiency and extend tool
+                                            life.
+                                        </li>
+                                        <li>It is installed on the machine table and has a modular design to adapt to
+                                            different types of machine tools and machining centers</li>
+                                    </ul>
+                                </div>
+                                <a class="ad-contact" href="#contact">get free tquote</a>
                             </div>
-                            <ul>
-                                <li>Automatic frequency search, automatic
-                                    frequency tracking, no need for manual adjustment</li>
-                                <li>Ultrasonic amplitude is stepless and
-                                    adjustable from 0% - 100% , intelligently
-                                    matching of different product types</li>
-                                <li>More than 300 welding records</li>
-                            </ul>
 
                         </div>
-                        <div class="box col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="box-img">
-                                <img src="images/advantages4.png" alt="">
-                            </div>
-
-                            <ul>
-                                <li>Replace manual welding</li>
-                                <li>Increase efficiency</li>
-                                <li>lower the cost</li>
-                            </ul>
-                        </div>
-
                     </div>
                 </div>
             </div>
-
         </div>
 
-        <!-- principle -->
-        <div class="principle">
-            <a name="working"></a>
-            <h3>Ultrasonic Welding System - Working Principle</h3>
+        <!-- choose -->
+        <div class="choose">
             <div class="container">
                 <div class="row">
-                    <div class="box clearfix">
-                        <div class="col-lg-6 col-md-6">
-                            <ul>
-                                <li class="clearfix">
-                                    <div class="box-img col-lg-3"><img src="images/principle1.png" alt=""></div>
-                                    <p class="col-lg-9">Ultrasonic generator transforms low-frequency
-                                        alternating current into high-frequency alternating
-                                        current, and transforms electric energy into mechanical
-                                        energy through the transducer</p>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="box-img col-lg-3"><img src="images/principle2.png" alt=""></div>
-                                    <p class="col-lg-9">When the welding head acts on the contact surface
-                                        of thermoplastic, it will produce tens of thousands
-                                        of high frequency vibrations per second</p>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="box-img col-lg-3"><img src="images/principle3.png" alt=""></div>
-                                    <p class="col-lg-9">The high frequency vibration transmits ultrasonic
-                                        energy to welding area , local high temperature is
-                                        created due to mechanical force and friction between
-                                        the plastic parts </p>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="box-img col-lg-3"><img src="images/principle4.png" alt=""></div>
-                                    <p class="col-lg-9">Pressure lasts for a few seconds, ultrasonic welding
-                                        making it solidify, forming a solid molecular chain
-                                        and realizing welding</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="box-imgs">
-                                <img src="images/principle5.png" alt="">
+                    <h3>Why Choose CONPROFE</h3>
+                    <div class="content">
+                        <!-- 奇 左图右文 -->
+                        <div class="box clearfix">
+                            <div class="imgs col-lg-6 col-md-6 col-sm-6">
+                                <div class="box-img"><img src="/Public/www/images/choose.png" alt=""></div>
+                            </div>
+                            <div class="txt col-lg-6  col-md-6 col-sm-6">
+                                <h6>Advantages of ultrasonic machining</h6>
+                                <ul>
+                                    <li>Easy to achieve ultrasonic machining without replacing the customer's machine
+                                        tool
+                                        spindle</li>
+                                    <li>Especially suitable for precision machining of hard and brittle materials. Can
+                                        improve machining accuracy and machining efficiency and extend tool life.
+                                    </li>
+                                    <li> It is installed on the machine table and has a modular design to adapt to
+                                        different
+                                        types of machine tools and machining centers
+                                    </li>
+                                </ul>
                             </div>
                         </div>
+                        <!-- 偶 右图左文-->
+                        <div class="box clearfix">
+                            <div class="txt col-lg-6  col-md-6 col-sm-6">
+                                <h6>Advantages of ultrasonic machining</h6>
+                                <ul>
+                                    <li>Easy to achieve ultrasonic machining without replacing the customer's machine
+                                        tool
+                                        spindle</li>
+                                    <li>Especially suitable for precision machining of hard and brittle materials. Can
+                                        improve machining accuracy and machining efficiency and extend tool life.
+                                    </li>
+                                    <li> It is installed on the machine table and has a modular design to adapt to
+                                        different
+                                        types of machine tools and machining centers
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="imgs col-lg-6 col-md-6 col-sm-6 ">
+                                <div class="box-img"><img src="/Public/www/images/choose.png" alt=""></div>
+                            </div>
+
+                        </div>
+
+                        <div class="box clearfix">
+                            <div class="imgs col-lg-6 col-md-6 col-sm-6">
+                                <div class="box-img"><img src="/Public/www/images/choose.png" alt=""></div>
+                            </div>
+                            <div class="txt col-lg-6  col-md-6 col-sm-6">
+                                <h6>Advantages of ultrasonic machining</h6>
+                                <ul>
+                                    <li>Easy to achieve ultrasonic machining without replacing the customer's machine
+                                        tool
+                                        spindle</li>
+                                    <li>Especially suitable for precision machining of hard and brittle materials. Can
+                                        improve machining accuracy and machining efficiency and extend tool life.
+                                    </li>
+                                    <li> It is installed on the machine table and has a modular design to adapt to
+                                        different
+                                        types of machine tools and machining centers
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="box clearfix">
+                            <div class="txt col-lg-6  col-md-6 col-sm-6">
+                                <h6>Advantages of ultrasonic machining</h6>
+                                <ul>
+                                    <li>Easy to achieve ultrasonic machining without replacing the customer's machine
+                                        tool
+                                        spindle</li>
+                                    <li>Especially suitable for precision machining of hard and brittle materials. Can
+                                        improve machining accuracy and machining efficiency and extend tool life.
+                                    </li>
+                                    <li> It is installed on the machine table and has a modular design to adapt to
+                                        different
+                                        types of machine tools and machining centers
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="imgs col-lg-6 col-md-6 col-sm-6">
+                                <div class="box-img"><img src="/Public/www/images/choose.png" alt=""></div>
+                            </div>
+
+                        </div>
+
                     </div>
+                    <a class="ad-contact" href="#contact">get free tquote</a>
 
                 </div>
             </div>
-
-
-
         </div>
 
-        <!-- parameters-->
-        <div class="parameters">
-            <a name="technical"></a>
-            <h3>Ultrasonic welding system-Technical Parameters</h3>
-
-            <div class="box">
-                <table>
-                    <tr>
-                        <th>Items</th>
-                        <th>Technical Parameters</th>
-                    </tr>
-                    <tr>
-                        <td>Rated Power</td>
-                        <td>1000~2000W</td>
-                    </tr>
-                    <tr>
-                        <td>Working Frequency </td>
-                        <td>15KHz/20KHz</td>
-                    </tr>
-                    <tr>
-                        <td>Working Power</td>
-                        <td>AC220V 50Hz</td>
-                    </tr>
-                    <tr>
-                        <td>Automatic Frequency Search Time </td>
-                        <td>&lt;1s</td>
-                    </tr>
-                    <tr>
-                        <td>Automatic Frequency Tracking Time </td>
-                        <td>0.1~5s</td>
-                    </tr>
-                    <tr>
-                        <td>Power Weight </td>
-                        <td>4kg</td>
-                    </tr>
-                    <tr>
-                        <td>Power Stability</td>
-                        <td>≤8%</td>
-                    </tr>
-                    <tr>
-                        <td>Remote Terminal Dynamically Responding Time </td>
-                        <td>≤15ms</td>
-                    </tr>
-                    <tr>
-                        <td>Overcurrent Protection Current </td>
-                        <td>12A </td>
-                    </tr>
-                    <tr>
-                        <td>Overcurrent Protection Time</td>
-                        <td>100ms</td>
-                    </tr>
-                </table>
-            </div>
-
-        </div>
-
-        <!-- Contact Us -->
-        <div class="contact">
-            <a name="contact"></a>
-            <h3>Contact Us</h3>
+        <!-- number -->
+        <div class="number">
             <div class="container">
                 <div class="row">
-                    <form method="post" class="clearfix" onsubmit="return beforeSubmit2(this);">
-                        <div class="clearfix">
-                            <div class="left col-lg-6 col-md-6">
-                                <div class="box">
-                                    <p>Name <span>*</span></p>
-                                    <input type="text" id="nickname" name="name">
-                                </div>
-                                <div class="box">
-                                    <p>Company <span>*</span></p>
-                                    <input type="text" id="nickname" name="company">
-                                </div>
-                                <div class="box">
-                                    <p> Cellphone <span>*</span></p>
-                                    <input type="text" id="nickname" name="cellphone">
-                                </div>
-                                <div class="box">
-                                    <p> Website or Social Media Account</p>
-                                    <input type="text" id="nickname">
-                                </div>
-                                <div class="box">
-                                    <p> Counntry <span>*</span></p>
-                                    <input type="text" id="nickname" name="counntry">
-                                </div>
-                            </div>
-                            <div class="right col-lg-6 col-md-6">
-                                <div class="box">
-                                    <p> Email <span>*</span></p>
-                                    <input type="text" id="nickname" name="email">
-                                </div>
-                                <div class="box">
-                                    <p> Message for Max Prefab </p>
-                                    <textarea></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="btn-box">
-                            <input type="submit" value="SUBMIT" class="submit-btn">
-                        </div>
-
-                    </form>
+                    <div class="col-lg-3 col-md-3 col-sm-3 ">
+                        <span class="counter num" data-counter-time="2000" data-counter-delay="100">200</span><i>+</i>
+                        <p>DMG MAZAK FAUNC</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <span class="counter num" data-counter-time="2000" data-counter-delay="100">50</span><i>+</i>
+                        <p>ZOLLER HAIMER SPERONI</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <span class="counter num" data-counter-time="2000" data-counter-delay="100">300</span><i>+</i>
+                        <p>Core patents<br>
+                            (domestic / international)</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <span class="counter num" data-counter-time="2000" data-counter-delay="100">1,000</span><i>+</i>
+                        <p>Employees</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- info -->
-        <div class="info">
-            <div class="box">
-                <div class="widescreen">
-                    <div class="container-full">
-                        <div class="row-full">
-                            <ul class="clearfix">
-                                <li><span class="box-img"><img src="images/phone.png" alt=""> </span>Willa Zhao:+86
-                                    13826196666</li>
-                                <li> <span class="box-img"><img src="images/email.png"
-                                            alt=""></span>jiawei.zhao@conprofetech.com </li>
-                                <li><span class="box-img"><img src="images/phone.png" alt=""></span>
-                                    Lora Luo:+86 13826227777 </li>
-                                <li> <span class="box-img"><img src="images/email.png"
-                                            alt=""></span>xianfang.luo@conprofetech.com</li>
-                                <li> <span class="box-img"><img src="images/www.png" alt=""></span> www.conprofetech.com
-                                </li>
-                            </ul>
+        <!-- Certificated -->
+        <div class="certificated">
+            <div class="container">
+                <div class="row">
+                    <h3>We Are Trusted And Certificated By</h3>
+                    <div class="content clearfix">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="box-img"><img src="/Public/www/images/cer1.png" alt=""></div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="box-img"><img src="/Public/www/images/cer2.png" alt=""></div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="box-img"><img src="/Public/www/images/cer3.png" alt=""></div>
                         </div>
                     </div>
                 </div>
-
-
-                <p></p>
             </div>
-            <div class="copy">Conprofe Technology Group Co., Ltd.</div>
         </div>
 
-        <!-- gotop -->
-        <div class="goTop">
-            <i class="topIcon"></i>
-            <p>TOP</p>
+        <!-- contact -->
+        <div>
+            <a id="contact"></a>
+            <div class="contact">
+                <div class="container">
+                    <div class="row">
+                        <form method="post" class="clearfix" onsubmit="return beforeSubmit2(this);"
+                            action="index.php?g=Home&a=message">
+                            <div class="left col-lg-4 col-md-4 col-sm-4">
+                                <h5>contact us for all your needs!</h5>
+                                <p> - you can get free quote now </p>
+                            </div>
+                            <div class="right col-lg-8 col-md-8 col-sm-8">
+                                <div class="clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="box ">
+                                            <p>Name <span>*</span></p> <input type="text" name="name">
+                                        </div>
+                                        <div class="box">
+                                            <p>Company <span>*</span></p> <input type="text" name="company">
+                                        </div>
+                                        <div class="box">
+                                            <p> Cellphone <span>*</span></p> <input type="text" name="phone">
+                                        </div>
+                                        <div class="box">
+                                            <p> Website or Social Media Account</p> <input type="text" name="account">
+                                        </div>
+                                        <div class="box">
+                                            <p> Country <span>*</span></p> <input type="text" name="con">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="box">
+                                            <p> Email <span>*</span></p> <input type="text" name="email">
+                                        </div>
+                                        <div class="box">
+                                            <p> Message for Max Prefab </p> <textarea name="message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <input type="submit" value="Send your message" class="submit-btn">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
-
-
-
-
-</body>
-<!-- js -->
-<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="./js/swiper-4.5.0.min.js"></script>
-<script type="text/javascript" src="./js/bootstrap.min.js"></script>
-<script type="text/javascript" src="./js/wow.min.js"></script>
-<script type="text/javascript" src="./js/main.js"></script>
-
-</html>
